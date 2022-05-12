@@ -4,16 +4,16 @@ let pagina = 1;
 const btnAnterior = document.getElementById('btnAnterior');
 const btnSiguiente = document.getElementById('btnSiguiente');
 
-btnSiguiente.addEventListener("click", () => {
-	if(pagina < 1000){
-		pagina += 1;
+btnAnterior.addEventListener("click", () => {
+	if(pagina > 1){
+		pagina -= 1;
 		cargarPeliculas();
 	}
 });
 
-btnAnterior.addEventListener("click", () => {
-	if(pagina > 1){
-		pagina -= 1;
+btnSiguiente.addEventListener("click", () => {
+	if(pagina < 1000){
+		pagina += 1;
 		cargarPeliculas();
 	}
 });
